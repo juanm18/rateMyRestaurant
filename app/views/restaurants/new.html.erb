@@ -1,0 +1,12 @@
+<h1>Add Restaurants</h1>
+<div class="container">
+	<div class="row">
+		<form action="/restaurants/create" method="POST">
+      <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+      <p>Restaurant Name: <input type="text" id="name" name="name" class="input-block-level" placeholder="Restaurant name"></p>
+      <p><button type="submit" class="btn btn-warning pull-right">Submit</button></p>
+    </form>
+	</div>
+</div>
+
+<a href="/restaurants">Restaurant List</a>

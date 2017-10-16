@@ -1,0 +1,15 @@
+<h1>Restaurants</h1>
+<p><a href="/logout"><button type="button" class="btn btn-labeled btn-danger">
+                <span class="btn-label"><i class="glyphicon glyphicon-remove"></i></span>LogOut</button></a>| <a class="btn icon-btn btn-success" href="/restaurants/new"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-success"></span>Add</a></p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <ol class="ordered-list">
+              <% @restaurants.each do |r|%>
+              <li> <%=r.name%> | avg rating: <%=r.average%> | <a href="/rate/restaurant/<%=r.id%>">Rate</a></li>
+              <%end%>
+            </ol>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Submit your Rate for <%=@restaurant.name%></h1>
+<form action="/rate/restaurant/<%=@restaurant.id%>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+  <input type="hidden" name="restaurant_id" value="<%=@restaurant.id%>">
+  Rate: <input type="number" name="rate" value="" min="1" max="5">
+  <input type="submit" name="" value="Submit Rate">
+</form>
+<a href="/restaurants">Return To List Of Restaurants</a>

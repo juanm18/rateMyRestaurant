@@ -1,0 +1,33 @@
+// Place all the styles related to the Restaurants controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-label {position: relative;left: -12px;display: inline-block;padding: 6px 12px;background: rgba(0,0,0,0.15);border-radius: 3px 0 0 3px;}
+.btn-labeled {padding-top: 0;padding-bottom: 0;}
+.btn { margin-bottom:10px; }
+
+
+
+ol {
+    counter-reset: myCouter;
+}
+
+li {
+    list-style: outside none none;
+}
+
+li::before {
+    content: counter(myCouter, decimal);
+    counter-increment: myCouter;
+
+    background: #2980b9 none repeat scroll 0 0;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 10px;
+    text-align: center;
+    width: 40px;
+}
+
+.btn-glyphicon { padding:8px; background:#ffffff; margin-right:4px; }
+.icon-btn { padding: 1px 15px 3px 2px; border-radius:50px;}
